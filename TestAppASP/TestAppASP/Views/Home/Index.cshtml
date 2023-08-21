@@ -1,0 +1,14 @@
+﻿@using System.Linq
+@model SearchRequest
+@{
+    ViewData["Title"] = "MultiSearcher";
+}
+
+<form method="post" asp-controller="S" asp-action="Search">
+    <input asp-for="Request" />
+    <span asp-validation-for="Request"></span>
+
+    <input type="submit" value="Search" />
+</form>
+
+

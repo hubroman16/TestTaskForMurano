@@ -1,0 +1,22 @@
+﻿@using System.Linq
+@model List<SearchRequest>
+
+
+<h1 style="margin-top:40px;font-size:30px;font-weight: 700;">Результаты поиска</h1>
+
+@if (Model != null && Model.Any())
+{
+    <div style="margin-top:35px">
+        @foreach (var item in Model)
+        {
+            <div class="search-result" style="font-size:18px;margin-top:12px;text-align:left">
+                <p>Описание: @item.Description</p>
+                <p>URL: <a href="@item.URL">@item.URL</a></p>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>Ничего не было найдено</p>
+}
